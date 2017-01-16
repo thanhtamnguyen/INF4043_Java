@@ -1,6 +1,8 @@
-package fr.esiea.unique.binome.name.dictionary;
+package fr.esiea.nguyen_sadaoui;
 
 import org.junit.Before;
+
+import fr.esiea.nguyen_sadaoui.IDictionary;
 
 import static junit.framework.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
