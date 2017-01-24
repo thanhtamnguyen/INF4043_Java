@@ -24,3 +24,4 @@ public class DictionaryTest {
         assertFalse(dictionary.isWord("namam"));
     }
 }
+
