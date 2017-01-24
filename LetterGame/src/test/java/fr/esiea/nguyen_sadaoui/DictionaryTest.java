@@ -10,7 +10,8 @@ import static org.junit.Assert.assertFalse;
 /**
  * Unit test sample for Dictionary.
  */
-public class DictionaryTest {
+public class DictionaryTest 
+{
 
     private IDictionary dictionary;
 
@@ -21,6 +22,6 @@ public class DictionaryTest {
 
     public void testIsWord() {
         assertTrue(dictionary.isWord("maman"));
-        assertFalse(dictionary.isWord("namam"));
+        assertFalse(dictionary.isWord("papa"));
     }
 }
