@@ -2,17 +2,32 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>fr.esiea.unique.binome.name</groupId>
+  <groupId>fr.esiea.nguyen_sadaoui.name</groupId>
   <artifactId>LetterGame</artifactId>
   <version>0.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>your binome name : Letter Game</name>
+  <name>NGUYEN SADAOUI : Letter Game</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<java.version>1.8</java.version>
   </properties>
 
+   <build>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.3</version>
+			<configuration>
+				<source>${java.version}</source>
+				<target>${java.version}</target>
+			</configuration>
+		</plugin>
+	</plugins>
+  </build>
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
