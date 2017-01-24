@@ -15,7 +15,7 @@ public class DictionaryTest {
 
 	@Before
 	public void setup() {
-		// Result r = junit.run(DictionaryTest());
+		IDictionary dictionary = null;
 	}
 
     @Test
