@@ -11,17 +11,21 @@ import org.junit.Test;
  */
 public class DictionaryTest {
 
-    private IDictionary dictionary;
+    private Dictionary dictionary;
 
 	@Before
 	public void setup() {
-		IDictionary dictionary = null;
+		Dictionary dictionary = Dictionary.getInstance();
 	}
 
     @Test
     public void testIsWord() {
-        assertTrue(dictionary.isWord("maman"));
-        assertFalse(dictionary.isWord("namam"));
+    	Dictionary dictionary = Dictionary.getInstance();
+    	dictionary.addWord("papa");
+    	dictionary.addWord("maman");
+    	dictionary.toString();
+        assertTrue("Papa is not",dictionary.isWordValid("maman"));
+        //assertFalse("Papa is not",dictionary.isWordValid("namam"));
     }
 }
 

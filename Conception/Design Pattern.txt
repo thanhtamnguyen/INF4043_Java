@@ -1,0 +1,5 @@
+Design Pattern 
+
+ - Singleton : Dictionary object
+Private constructor and instances itself
+
