@@ -15,17 +15,15 @@ public class DictionaryTest {
 
 	@Before
 	public void setup() {
-		Dictionary dictionary = Dictionary.getInstance();
+		Dictionary dict = Dictionary.getInstance();
 	}
 
     @Test
     public void testIsWord() {
-    	Dictionary dictionary = Dictionary.getInstance();
-    	dictionary.addWord("papa");
-    	dictionary.addWord("maman");
-    	dictionary.toString();
-        assertTrue("Papa is not",dictionary.isWordValid("maman"));
-        //assertFalse("Papa is not",dictionary.isWordValid("namam"));
+    	Dictionary dict = Dictionary.getInstance();
+    	dict.toString();
+        assertTrue("Papa is not",dict.isWord("maman"));
+        assertFalse("Papa is not",dict.isWord("namam"));
     }
 }
 

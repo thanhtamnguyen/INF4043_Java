@@ -7,6 +7,8 @@ public class Launcher {
 	
 	public static void main(String args[]){
 		System.out.println("Launching Letter Game");
+		Dictionary dico = Dictionary.getInstance();
+		
 	}
 	
 	//shuffle letter au debut
