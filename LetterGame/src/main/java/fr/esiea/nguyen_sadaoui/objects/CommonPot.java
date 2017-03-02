@@ -31,6 +31,11 @@ public class CommonPot {
 	public ArrayList<String> getAllLetters(){
 		return this.letters;
 	}
+	
+	public boolean hasLetter(String c){
+		if(this.letters.contains(c)) return true;
+		return false;
+	}
 
 
 }

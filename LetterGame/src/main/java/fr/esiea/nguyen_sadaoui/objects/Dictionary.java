@@ -59,6 +59,8 @@ public class Dictionary implements IDictionary {
 	public boolean isWord(String motTest) {
 		return mots.contains(motTest);
 	}
+	
+	//public void findWord
 }
 /*public class Dictionary implements IDictionary{
 	private static Dictionary instance = new Dictionary();

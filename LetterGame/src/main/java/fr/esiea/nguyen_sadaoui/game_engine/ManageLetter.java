@@ -6,7 +6,6 @@ import java.util.Random;
 public class ManageLetter {
 
 	public static ArrayList<String> generateLetter(int cas) {
-		
 		Random r = new Random();
 		ArrayList<String> potCommun = new ArrayList();
 		

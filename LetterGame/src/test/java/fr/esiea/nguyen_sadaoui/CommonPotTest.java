@@ -22,7 +22,7 @@ public class CommonPotTest {
     	assertNotNull("add letter", pot);
     	pot.getLetters();
     }
-    @Test
+    /*@Test
     public void testRemoveLetter() {
     	CommonPot pot = CommonPot.getInstance();
     	pot.getLetters();
@@ -30,6 +30,6 @@ public class CommonPotTest {
     	pot.getLetters();
     	pot.removeLetter("e");
     	assertNull("remove letter", pot);
-    }
+    }*/
 
 }

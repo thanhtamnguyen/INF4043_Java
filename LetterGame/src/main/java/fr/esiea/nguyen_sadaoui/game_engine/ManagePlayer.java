@@ -20,4 +20,20 @@ public class ManagePlayer {
 		System.out.println("Le nom du joueur 2 est: " + joueur2.getName());
 	}
 	
+	public static String promptForWord(){
+		System.out.println("Saisissez le mot que vous souhaitez écrire: ");
+		while(true){
+			Scanner sc = new Scanner(System.in);		
+			String word = sc.nextLine().toLowerCase();
+			if(word.matches("[a-z]*")){
+				return word;
+			}
+			System.out.println("Le mot saisi est incorrect. Veuillez saisir un seul mot sans chiffre ni accent: ");
+		}
+	}
+	
+	public static void addWordForPlayer(Player player, String validWord){
+		player.setWords(validWord);
+		player.setScore(player.getWords().size());
+	}
 }

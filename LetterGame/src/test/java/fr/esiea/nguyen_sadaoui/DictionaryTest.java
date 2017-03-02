@@ -26,5 +26,6 @@ public class DictionaryTest {
         assertTrue("Papa is not",dict.isWord("maman"));
         assertFalse("Papa is not",dict.isWord("namam"));
     }
+    
 }
 
