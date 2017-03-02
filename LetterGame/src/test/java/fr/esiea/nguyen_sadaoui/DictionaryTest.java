@@ -1,4 +1,5 @@
 package fr.esiea.nguyen_sadaoui;
+import fr.esiea.nguyen_sadaoui.objects.Dictionary;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
