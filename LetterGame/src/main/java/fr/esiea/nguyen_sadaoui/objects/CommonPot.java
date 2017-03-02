@@ -27,5 +27,10 @@ public class CommonPot {
 	public String getLetters(){
 		return this.letters.toString();
 	}
+	
+	public ArrayList<String> getAllLetters(){
+		return this.letters;
+	}
+
 
 }

@@ -13,14 +13,14 @@ public class ManageLetter {
 		switch (cas) {
 		
 		case 1:
-			String lettre1 = (String)(r.nextInt(26) + "a");
-			potCommun.add(lettre1);
+			char lettre1 = (char)(r.nextInt(26) + 'a');	
+			potCommun.add(""+lettre1);
 		case 2:
-			String lettre2 = (String)(r.nextInt(26) + "a");	
-			potCommun.add(lettre2);
+			char lettre2 = (char)(r.nextInt(26) + 'a');	
+			potCommun.add(""+lettre2);
 			//System.out.println(lettre2);
-			String lettre3 = (String)(r.nextInt(26) + "a");
-			potCommun.add(lettre3);
+			char lettre3 = (char)(r.nextInt(26) + 'a');
+			potCommun.add(""+lettre3);
 			//System.out.println(lettre3);
 
 		}
