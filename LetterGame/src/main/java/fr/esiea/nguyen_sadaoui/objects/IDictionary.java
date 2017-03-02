@@ -1,4 +1,4 @@
-package fr.esiea.nguyen_sadaoui;
+package fr.esiea.nguyen_sadaoui.objects;
 
 /**
  * Created on 16/01/17.

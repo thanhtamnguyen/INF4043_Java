@@ -4,7 +4,7 @@ import fr.esiea.nguyen_sadaoui.objects.*;
 import java.util.ArrayList;
 
 public class ManageCommonPot {
-	public static void mettreDansPotCommun(int cas) {
+	public static void putInPot(int cas) {
 		ArrayList<String> lettres = ManageLetter.generateLetter(cas);
 		ArrayList<String> potCommun = new ArrayList<String>();
 		

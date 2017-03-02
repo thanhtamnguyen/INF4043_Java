@@ -5,7 +5,7 @@ import fr.esiea.nguyen_sadaoui.objects.*;
 
 
 public class ManagePlayer {
-	public static void initialisationJoueurs() {
+	public static void playerInit() {
 		Player joueur1;
 		Player joueur2;
 		Scanner sc = new Scanner(System.in);

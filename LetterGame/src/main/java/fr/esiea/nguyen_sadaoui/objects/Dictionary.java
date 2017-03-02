@@ -1,4 +1,4 @@
-package fr.esiea.nguyen_sadaoui;
+package fr.esiea.nguyen_sadaoui.objects;
 
 import java.util.Optional;
 
@@ -13,6 +13,8 @@ public class Dictionary implements IDictionary {
 
 	private static Dictionary instance = new Dictionary();
 	private HashSet<String> mots = Fichier();
+	
+	
 	private Dictionary(){};
 
 	/*public Dictionary(){
