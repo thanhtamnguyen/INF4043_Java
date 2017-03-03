@@ -14,11 +14,24 @@ public class Launcher {
 		System.out.println("Launching Letter Game");
 		
 		/*
-		 * Object instance
+		 * Object instanciation
 		 */
 		Dictionary dico = Dictionary.getInstance();
 		CommonPot pot = CommonPot.getInstance();
 		ManagePlayer.playerInit(player1, player2);
+		int currentPlayerID = 0;
+		
+		//WORKING
+		currentPlayerID = ManageTurn.whoStarts(player1, player2);
+		
+		while(ManageTurn.checkScoreAndContinue(player1, player2)){
+			ManageTurn.gameSummary(player1, player2, currentPlayerID);
+		}
+		ManageTurn.whoWins(player1, player2);
+		System.exit(0);
+		
+		
+		//OLD
 		//GestionLettres.recupLettres(2);
 		ManageCommonPot.putInPot(2);
 		

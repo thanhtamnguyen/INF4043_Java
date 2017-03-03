@@ -1,5 +1,7 @@
 package fr.esiea.nguyen_sadaoui;
+import fr.esiea.nguyen_sadaoui.game_engine.ManageCommonPot;
 import fr.esiea.nguyen_sadaoui.objects.CommonPot;
+import fr.esiea.nguyen_sadaoui.objects.Dictionary;
 
 import static org.junit.Assert.*;
 
@@ -31,5 +33,20 @@ public class CommonPotTest {
     	pot.removeLetter("e");
     	assertNull("remove letter", pot);
     }*/
+    
+    @Test
+    public void testShowPot(){
+		CommonPot pot = CommonPot.getInstance();
+		pot.addLetter("t");
+		pot.addLetter("e");
+		pot.addLetter("s");
+		pot.addLetter("p");
+		pot.addLetter("a");
+		pot.addLetter("o");
+		pot.addLetter("u");
+		pot.addLetter("c");
+		
+		System.out.println(ManageCommonPot.showPot());
+    }
 
 }

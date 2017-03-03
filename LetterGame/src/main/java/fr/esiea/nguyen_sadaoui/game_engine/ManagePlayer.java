@@ -69,14 +69,15 @@ public class ManagePlayer {
 		player.setScore(player.getWords().size());
 	}
 	
-	public static void showPlayerWord(Player player){
+	public static String showPlayerWord(Player player){
 		/*
 		 * The Player's words are displayed
 		 */
+		String toReturn = "\nLes mots de "+player.getName()+" ; score : "+player.getScore();
 		System.out.println("\nVoici les mots du Joueur "+player.getName()+":");
 		for(int i=0; i<player.getWords().size();i++){
-			System.out.println("  "+i+" - "+player.getWords().get(i));
-		}
+			toReturn += "\n  "+i+" - "+player.getWords().get(i);
+		}return toReturn;
 	}
 	
 	public static String ifPlayerHasThisWord(Player player, String newWord){
@@ -114,4 +115,6 @@ public class ManagePlayer {
         isr.close(); 
 		return player.getWords().get(choice);
 	}
+
+	
 }

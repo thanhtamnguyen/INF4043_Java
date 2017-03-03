@@ -7,22 +7,19 @@ public class ManageLetter {
 
 	public static ArrayList<String> generateLetter(int cas) {
 		Random r = new Random();
-		ArrayList<String> potCommun = new ArrayList();
+		ArrayList<String> intermediate = new ArrayList();
 		
 		if(cas == 1) {
 			char lettre1 = (char)(r.nextInt(26) + 'a');	
-			potCommun.add(""+lettre1);
+			intermediate.add(""+lettre1);
 			
 		} else if (cas == 2) {
-	
 			char lettre2 = (char)(r.nextInt(26) + 'a');	
-			potCommun.add(""+lettre2);
-			//System.out.println(lettre2);
+			intermediate.add(""+lettre2);
 			char lettre3 = (char)(r.nextInt(26) + 'a');
-			potCommun.add(""+lettre3);
-			//System.out.println(lettre3);
-
+			intermediate.add(""+lettre3);
 		}
-		return potCommun;
+		return intermediate;
 	}
+	
 }

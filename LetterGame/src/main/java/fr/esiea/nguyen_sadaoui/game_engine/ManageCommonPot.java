@@ -37,4 +37,10 @@ public class ManageCommonPot {
 			if(pot.hasLetter(""+c)) pot.removeLetter(""+c);
 		}
 	}
+	
+	public static String showPot(){
+		CommonPot pot = CommonPot.getInstance();
+		String result = "Le contenu du pot actuellement : "+pot.getLetters()+"\n";
+		return result;
+	}
 }
