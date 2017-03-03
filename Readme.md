@@ -47,7 +47,7 @@
   
 - Nous attendons aussi une description de votre architecture (Quel responsabilité à  chaque package, ..).
   
-    Ce projet est répertorié en deux pricnipaux packages qui sont: "game_engine" et "objects":
+    Ce projet est répertorié en deux principaux packages qui sont: "game_engine" et "objects":
     
     Le package "game_engine" à pour rôle de faire la gestion de  la mécanique du jeu. 
     C'est-à-dire la gestion du pot commun, du dictionnaire, de la génération de lettres, des joeurs et des tours.
@@ -73,8 +73,8 @@
 
 ## Technologies à utiliser 
 
-- Le TP devra être rendu sur github et donc Ãªtre gérer via Git
-  - Plusieurs commits par personne sont attendus! 
+- Le TP devra être rendu sur github et donc être gérer via Git
+ - Plusieurs commits par personne sont attendus! 
 - Le projet doit être rendu en Java. 
 - Le projet devra pouvoir être compiler et lancer en ligne de commande (sans IDE) :
   - L'utilisation de `Maven` ou `Gradle` est recommandée 
@@ -90,7 +90,7 @@
 - Tout les exercices demandés (autre que le code) sont à  livrer au [format markdown](https://guides.github.com/features/mastering-markdown/) dans un README.md à la racine de votre projet.
   - Le README.md peut référencer d'autres fichiers markdown situés dans le projet 
 
-- Une grande importance sera attachÃée à  la qualité du code, à  la conception objet et au découpage par fonctionnalités avec des contrats clairs. 
+- Une grande importance sera attachée à  la qualité du code, à  la conception objet et au découpage par fonctionnalités avec des contrats clairs. 
 - Nous vous encourageons à utiliser des analyseurs de code statiques (PMD, findbugs, ...). Nous les utiliserons pour corriger.
 - Nous encourageons aussi une approche TDD sur le projet. 
 
