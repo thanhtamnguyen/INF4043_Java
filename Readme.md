@@ -1,95 +1,95 @@
 # TP Architecture Logicielle / Inf4043 - 2017 - Jeux de lettres
 
 - Date de rendu : 24/02/2017 23h
-- Binôme : Thanh Tam NGUYEN | Swan SADAOUI
-- Contacts : 
-  - mlab.cours[at]gmail[dot]com (TP à rendre à cette adresse)
+- BinÃ´me : Thanh Tam NGUYEN | Swan SADAOUI
+u- Contacts : 
+  - mlab.cours[at]gmail[dot]com (TP Ã  rendre Ã  cette adresse)
   - ledoyen.esiea[at]gmail[dot]com
 
-## Règles du jeux 
+## RÃ¨gles du jeux 
 
 - Objectif du jeux :
   - Le premier joueur ayant 10 mots gagne la partie
 
-- Déroulement du jeux :
-  - Chacun des joueurs tire une lettre aléatoire d'un sac, et les mettent au milieu dans le pot commun
-  - Le joueur qui a tiré la lettre la plus petite lettre dans l'alphabet commence
-  - Chaque fois que c'est le début du tour d'un joueur il tire deux lettres aléatoires qu'il rajoute au pot commun
-  - Chaque fois qu'un joueur fait un mot il tire une lettre aléatoire qu'il rajoute au pot commun
+- DÃ©roulement du jeux :
+b  - Chacun des joueurs tire une lettre alÃ©atoire d'un sac, et les mettent au milieu dans le pot commun
+  - Le joueur qui a tirÃ© la lettre la plus petite lettre dans l'alphabet commence
+  - Chaque fois que c'est le dÃ©but du tour d'un joueur il tire deux lettres alÃ©atoires qu'il rajoute au pot commun
+  - Chaque fois qu'un joueur fait un mot il tire une lettre alÃ©atoire qu'il rajoute au pot commun
   - Quand le joueur ne trouve plus de mot il passe et le joueur suivant commence son tour (par tirer 2 lettres qu'il rajoute au pot commun)
 
 - Comment faire un mot ?
   - En utilisant uniquement les lettres du pot commun
   - En prenant un mot de ces adversaires (toutes les lettres du mot) et en lui rajoutant des lettres du pot commun
   - En rallongeant un de ces mots avec des lettres du pot commun ou en utilisant un autre mot (toutes les lettres)
-  - Attention, seul les noms communs sont autorisés
+  - Attention, seul les noms communs sont autorisÃ©s
 
 - Pour faciliter :
-  - les lettres possibles sont uniquement les 26 de l'alphabet (ex : é <-> e)
-  - les mots composés sont considérés comme deux mots
+  - les lettres possibles sont uniquement les 26 de l'alphabet (ex : Ã© <-> e)
+  - les mots composÃ©s sont considÃ©rÃ©s comme deux mots
 
-- Pour les plus avancés :
+- Pour les plus avancÃ©s :
   - Le cas des anagrammes :
-    - On peut voler un mot en faisant un anagramme uniquement si il n'a pas déjà été fait. Bien entendu, faire un anagramme permet de tirer une nouvelle lettre.
+    - On peut voler un mot en faisant un anagramme uniquement si il n'a pas dÃ©jÃ  Ã©tÃ© fait. Bien entendu, faire un anagramme permet de tirer une nouvelle lettre.
 
 ## Objectif du TP
 
-- Une première étape consiste à pouvoir jouer à plusieurs autour d'un même écran.
+- Une premiÃ¨re Ã©tape consiste Ã  pouvoir jouer Ã  plusieurs autour d'un mÃªme Ã©cran.
 - Une interface en ligne de commande est suffisante.
 - Nous attendons aussi a minima une de ces deux extensions (ou les deux pour les plus courageux :-)) :
   - Une architecture client / serveur, chaque joueur utilisant une instance d'un client pour jouer.
   - Une intelligence artificiel permettant de jouer contre l'ordinateur.
-- Nous attendons aussi une description de votre architecture (Quel responsabilité à chaque package, ..).
+- Nous attendons aussi une description de votre architecture (Quel responsabilitÃ© Ã  chaque package, ..).
   
 - De plus, vous devrez illustrer trois principes SOLID ou design pattern en utilisant vos propres classes. 
-  - pourquoi avez-vous utilisé ce design pattern / principe ? Qu'est-ce que cela vous a apporté ? Comment l'avez-vous appliqué ?
-  singleton, dico.java, CommonPot
-  objet instanci� une seul fois, reegarder sur internet
+  - pourquoi avez-vous utilisÃ© ce design pattern / principe ? Qu'est-ce que cela vous a apportÃ© ? Comment l'avez-vous appliquÃ© ?
+  singleton, dico.java, CommonPotu
+  objet instancié une seul fois, reegarder sur internet
   - Nous attendons quelques paragraphes seulement
-- Ces deux exercices sont à livrer dans le README.md du projet.
+- Ces deux exercices sont Ã  livrer dans le README.md du projet.
 
-## Technologies à utiliser 
+## Technologies Ã  utiliser 
 
-- Le TP devra être rendu sur github et donc être gérer via Git
+- Le TP devra Ãªtre rendu sur github et donc Ãªtre gÃ©rer via Git
   - Plusieurs commits par personne sont attendus! 
-- Le projet doit être rendu en Java. 
-- Le projet devra pouvoir être compiler et lancer en ligne de commande (sans IDE) :
-  - L'utilisation de `Maven` ou `Gradle` est recommandée 
-  - cela ne sert a rien de commiter une jar. Nous n'exécuterons que du code compilé par nous même.
+- Le projet doit Ãªtre rendu en Java. 
+- Le projet devra pouvoir Ãªtre compiler et lancer en ligne de commande (sans IDE) :
+  - L'utilisation de `Maven` ou `Gradle` est recommandÃ©e 
+  - cela ne sert a rien de commiter une jar. Nous n'exÃ©cuterons que du code compilÃ© par nous mÃªme.
 - Le projet doit contenir des tests unitaires
   - Utilisation de `JUnit` ou `Test-ng`
-  - L'utilisation des librairies comme `assertJ` et `Mockito` est recommandé.
+  - L'utilisation des librairies comme `assertJ` et `Mockito` est recommandÃ©.
 
 ## Comment rendre son TP
 
 - Merci d'envoyer **un mail dont le sujet est `nom_binome1 | nom_binome2 | url_github`**
-  - Tout non respect de cette règle entrainera un 0 au TP (Un script récupérera les projets)
-- Tout les exercices demandés (autre que le code) sont à livrer au [format markdown](https://guides.github.com/features/mastering-markdown/) dans un README.md à la racine de votre projet.
-  - Le README.md peut référencer d'autres fichiers markdown situés dans le projet 
+  - Tout non respect de cette rÃ¨gle entrainera un 0 au TP (Un script rÃ©cupÃ©rera les projets)
+- Tout les exercices demandÃ©s (autre que le code) sont Ã  livrer au [format markdown](https://guides.github.com/features/mastering-markdown/) dans un README.md Ã  la racine de votre projet.
+  - Le README.md peut rÃ©fÃ©rencer d'autres fichiers markdown situÃ©s dans le projet 
 
-- Une grande importance sera attachée à la qualité du code, à la conception objet et au découpage par fonctionnalités avec des contrats clairs. 
-- Nous vous encourageons à utiliser des analyseurs de code statiques (PMD, findbugs, ...). Nous les utiliserons pour corriger.
+- Une grande importance sera attachÃ©e Ã  la qualitÃ© du code, Ã  la conception objet et au dÃ©coupage par fonctionnalitÃ©s avec des contrats clairs. 
+- Nous vous encourageons Ã  utiliser des analyseurs de code statiques (PMD, findbugs, ...). Nous les utiliserons pour corriger.
 - Nous encourageons aussi une approche TDD sur le projet. 
 
 ## Points d'attention lors de la correction
 
 - Respect des consignes de rendu de projets
-- Des explications claires et fonctionnelles pour compiler et lancer le projet situé dans le README.md. 
-- Barèmes :
+- Des explications claires et fonctionnelles pour compiler et lancer le projet situÃ© dans le README.md. 
+- BarÃ¨mes :
 
 | Points | Description           | 
 | :----- |:-------------| 
-|5 points | Architecture du code, découpage des classes, respect des principes Objects (SOLIDE), méthodes < 15 lignes... |
-|5 points | La totalité des feature faites. Pas de bug et cas aux limites gérés  |
+|5 points | Architecture du code, dÃ©coupage des classes, respect des principes Objects (SOLIDE), mÃ©thodes < 15 lignes... |
+|5 points | La totalitÃ© des feature faites. Pas de bug et cas aux limites gÃ©rÃ©s  |
 |3 points | Test : code coverage > 70%, assertions intelligentes dans les tests , tests unitaires |
 |2 point  | Exercice Architecture & Design Pattern / Solid |
 |2 points | Analyse statique de code findbug / PMD |
-|2 point  | Utilisation de Maven (ou autre logiciel du même type) pour gérer les dépendances et construire le projet. Utilisation de git avec plusieurs commits pour chaque personnes du binome |
-|1 point  | Conventions java / Maven respectées (Camelcase, package, ...) |
+|2 point  | Utilisation de Maven (ou autre logiciel du mÃªme type) pour gÃ©rer les dÃ©pendances et construire le projet. Utilisation de git avec plusieurs commits pour chaque personnes du binomeÂ |
+|1 point  | Conventions java / Maven respectÃ©es (Camelcase, package, ...) |
 
 ## Bootstrap du projet
 
-Pour faciliter le début nous vous proposons :
+Pour faciliter le dÃ©but nous vous proposons :
 
 ```
 $ git clone https://github.com/MLabusquiere/TP_4A_2017_Letter_Game.git LetterGame
