@@ -65,10 +65,9 @@
 
   - pourquoi avez-vous utilisé ce design pattern / principe ? Qu'est-ce que cela vous a apporté ? Comment l'avez-vous appliqué ?
   
-       Nous avons  utilisez un singleton dans les classes objets:  "Dicotionary.java" et "CommonPot.java" du package "Objects" car celui-        
-       ci nous permet de: 
-                          - s'assurer qu'une seule instance d'un objet sera instanciée (Ici les instances: "CommonPot" et "Dictionary").
-                          - s'assurer de l'unicité de l'instance à chaque appel. 
+       Nous avons  utilisez un singleton dans les classes objets:  "Dicotionary.java" et "CommonPot.java" du package "Objects" car              celui-ci nous permet de: 
+       - s'assurer  qu'une seule instance d'un objet sera instanciée (Ici les instances: "CommonPot" et "Dictionary").
+       - s'assurer de l'unicité de l'instance à chaque appel. 
    
 - Ces deux exercices sont à  livrer dans le README.md du projet.
 
