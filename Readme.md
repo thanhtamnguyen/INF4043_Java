@@ -115,9 +115,17 @@ d  - En prenant un mot de ces adversaires (toutes les lettres du mot) et en lui 
 Pour faciliter le début nous vous proposons :
 
 ```
-$ git clone https://github.com/MLabusquiere/TP_4A_2017_Letter_Game.git LetterGame
+$ git clone https://github.com/MLabusquiere/TP_4A_2017_Letter_Game.git
 $ cd LetterGame
 $ git remote rm origin
 $ git remote add origin <your_git_repository_url>
 $ git push -u origin master
+```
+
+## Installation du projet
+
+```
+$ git clone https://github.com/thanhtamnguyen/INF4043_LetterGame.git LetterGame
+$ cd INF4043_LetterGame/LetterGame
+$ mvn clean install eclipse:eclipse
 ```
