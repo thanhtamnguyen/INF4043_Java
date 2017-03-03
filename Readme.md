@@ -40,8 +40,11 @@
   - Une architecture client / serveur, chaque joueur utilisant une instance d'un client pour jouer.
   - Une intelligence artificiel permettant de jouer contre l'ordinateur.
 - Nous attendons aussi une description de votre architecture (Quel responsabilité à chaque package, ..).
+  
 - De plus, vous devrez illustrer trois principes SOLID ou design pattern en utilisant vos propres classes. 
   - pourquoi avez-vous utilisé ce design pattern / principe ? Qu'est-ce que cela vous a apporté ? Comment l'avez-vous appliqué ?
+  singleton, dico.java, CommonPot
+  objet instanci� une seul fois, reegarder sur internet
   - Nous attendons quelques paragraphes seulement
 - Ces deux exercices sont à livrer dans le README.md du projet.
 

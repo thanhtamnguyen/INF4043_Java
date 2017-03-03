@@ -8,6 +8,11 @@ public class ManageTurn {
 
 	static int turn = 1;
 	
+	public static void Action() {
+		
+		
+	}
+	
 	public static void turn(Player player1, Player player2) {
 		
 		//while (player1.getScore() != 10 || player2.getScore() != 10) {
