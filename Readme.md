@@ -3,6 +3,7 @@
 - Date de rendu : 03/03/2017 23h
 - Binôme : Thanh Tam NGUYEN | Swan SADAOUI
 - Classe: 4A CFA ESIEA
+
 - Contacts : 
   - mlab.cours[at]gmail[dot]com (TP à rendre à  cette adresse)
   - ledoyen.esiea[at]gmail[dot]com
@@ -29,7 +30,6 @@
 - Pour faciliter :
   - les lettres possibles sont uniquement les 26 de l'alphabet (ex : é <-> e)
   - les mots composés sont considérés comme deux mots
-
 - Pour les plus avancés :
   - Le cas des anagrammes :
     - On peut voler un mot en faisant un anagramme uniquement si il n'a pas déjà  été fait. Bien entendu, faire un anagramme permet de tirer une nouvelle lettre.
@@ -37,23 +37,35 @@
 ## Objectif du TP
 
 - Une première étape consiste à  pouvoir jouer à  plusieurs autour d'un même écran.
+
 - Une interface en ligne de commande est suffisante.
 - Nous attendons aussi a minima une de ces deux extensions (ou les deux pour les plus courageux :-)) :
   - Une architecture client / serveur, chaque joueur utilisant une instance d'un client pour jouer.
   - Une intelligence artificiel permettant de jouer contre l'ordinateur.
+  
+  
 - Nous attendons aussi une description de votre architecture (Quel responsabilité à  chaque package, ..).
   
-- De plus, vous devrez illustrer trois principes SOLID ou design pattern en utilisant vos propres classes. 
+    Ce projet est répertorié en deux pricnipaux packages qui sont: "game_engine" et "objects"
+    
+    Le package "game_engine" à pour rôle de faire la gestion de  la mécanique du jeu. C'est-à-dire la gestion du pot commun, 
+    du dictionnaire, de la génération de lettres, des joeurs et des tours.
+    
+    Le package "objects" contient tous les objets nécéssaire à la réalisation du jeu, qui sont: le pot commun, le dictionnaire, les joeurs.
+    
+    Par ailleurs, nous avont également notre classe "Launcher" qui nous permet le régir le bon déroulement du jeu.   
+  
+- De plus, vous devrez illustrer trois principes SOLID ou design pattern en utilisant vos propres classes.
+
+
+
   - pourquoi avez-vous utilisé ce design pattern / principe ? Qu'est-ce que cela vous a apporté ? Comment l'avez-vous appliqué ?
   
-      # Nous avons utilisez un singleton dans les classes objets:  "Dicotionary.java" et "CommonPot.java" du package "Objects" car celui-        ci nous permet de: 
+       Nous avons  utilisez un singleton dans les classes objets:  "Dicotionary.java" et "CommonPot.java" du package "Objects" car celui-        
+       ci nous permet de: 
                           - s'assurer qu'une seule instance d'un objet sera instanciée (Ici les instances: "CommonPot" et "Dictionary").
                           - s'assurer de l'unicité de l'instance à chaque appel. 
-      
-  objet instancié une seul fois, reegarder sur internet
- 
-  - Nous attendons quelques paragraphes seulement
-  
+   
 - Ces deux exercices sont Ã  livrer dans le README.md du projet.
 
 ## Technologies à utiliser 
