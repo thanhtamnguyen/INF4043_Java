@@ -46,8 +46,9 @@
 - De plus, vous devrez illustrer trois principes SOLID ou design pattern en utilisant vos propres classes. 
   - pourquoi avez-vous utilisé ce design pattern / principe ? Qu'est-ce que cela vous a apporté ? Comment l'avez-vous appliqué ?
   
-      Nous avons utilisez un singleton dans les classes objets:  "Dicotionary.java" et "CommonPot.java" du package "Objects" car celui-ci 
-      nous permet de: -
+      # Nous avons utilisez un singleton dans les classes objets:  "Dicotionary.java" et "CommonPot.java" du package "Objects" car celui-        ci nous permet de: 
+                          - s'assurer qu'une seule instance d'un objet sera instanciée (Ici les instances: "CommonPot" et "Dictionary").
+                          - s'assurer de l'unicité de l'instance à chaque appel. 
       
   objet instancié une seul fois, reegarder sur internet
  
@@ -71,7 +72,7 @@
 
 - Merci d'envoyer **un mail dont le sujet est `nom_binome1 | nom_binome2 | url_github`**
   - Tout non respect de cette règle entrainera un 0 au TP (Un script récupérera les projets)
-- Tout les exercices demandés (autre que le code) sont à  livrer au [format markdown](https://guides.github.com/features/mastering-markdown/) dans un README.md Ã  la racine de votre projet.
+- Tout les exercices demandés (autre que le code) sont à  livrer au [format markdown](https://guides.github.com/features/mastering-markdown/) dans un README.md à la racine de votre projet.
   - Le README.md peut référencer d'autres fichiers markdown situés dans le projet 
 
 - Une grande importance sera attachÃée à  la qualité du code, à  la conception objet et au découpage par fonctionnalités avec des contrats clairs. 
