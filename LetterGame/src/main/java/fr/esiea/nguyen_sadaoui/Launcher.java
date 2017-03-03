@@ -8,8 +8,16 @@ public class Launcher {
 	private static Player player2;
 	
 	public static void main(String args[]){
+		/*
+		 * Letter Game
+		 */
 		System.out.println("Launching Letter Game");
+		
+		/*
+		 * Object instance
+		 */
 		Dictionary dico = Dictionary.getInstance();
+		CommonPot pot = CommonPot.getInstance();
 		ManagePlayer.playerInit(player1, player2);
 		//GestionLettres.recupLettres(2);
 		ManageCommonPot.putInPot(2);
@@ -28,6 +36,7 @@ public class Launcher {
 			*/
 		//2-Passer le tour?
 			///on recommence
-		
+		//3-Arreter le jeu
+			////System.exit(0)
 	}
 }

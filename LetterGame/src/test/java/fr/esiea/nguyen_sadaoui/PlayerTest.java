@@ -56,7 +56,6 @@ public class PlayerTest {
 	public void testStealWord(){
 		Dictionary dico = Dictionary.getInstance();
 		CommonPot pot = CommonPot.getInstance();
-		pot.addLetter("t");
 		pot.addLetter("e");
 		pot.addLetter("a");
 		pot.addLetter("u");
@@ -67,9 +66,26 @@ public class PlayerTest {
 		Player joueur2 = new Player("Person2", 2, 0);
 		ManagePlayer.addWordForPlayer(joueur2, "est"); 
 		ManagePlayer.addWordForPlayer(joueur2, "lion"); 
-		String choix ="lion";
-		choix = ManagePlayer.showAndChoosePlayerWord(joueur2);
-		String newWord =  ManagePlayer.promptForWord();
+		
+		
+		String choix ="";
+		String newWord = "";
+//		try {
+//			choix = ManagePlayer.showAndChoosePlayerWord(joueur2);
+//		} catch (Exception e1) {
+//			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+//		}
+		//ManagePlayer.showPlayerWord(joueur2);
+		try {
+			newWord = ManagePlayer.promptForWord();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		choix=ManagePlayer.ifPlayerHasThisWord(joueur2, newWord);
+		System.out.println("choix "+choix);
+		System.out.println("newWord "+newWord);
 		//new word valid
 		assertTrue(ManageDictionary.useAWord(choix, newWord));
 		ManagePlayer.addWordForPlayer(joueur1, choix);
@@ -77,7 +93,8 @@ public class PlayerTest {
 		assertEquals(Integer.valueOf(1), Integer.valueOf(joueur1.getScore()));
 		assertEquals(Integer.valueOf(1), Integer.valueOf(joueur2.getScore()));
 	}
-	/*@Test
+	
+	@Test
 	public void testUseOwnWord(){
 		Dictionary dico = Dictionary.getInstance();
 		CommonPot pot = CommonPot.getInstance();
@@ -99,5 +116,5 @@ public class PlayerTest {
 		//assertEquals(Integer.valueOf(1), Integer.valueOf(joueur1.getScore()));
 		 * 
 		 */
-	//}*/
+	}
 }

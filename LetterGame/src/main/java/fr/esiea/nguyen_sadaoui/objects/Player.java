@@ -40,7 +40,7 @@ public class Player {
 		this.words.add(word);
 	}
 
-	public void removeWords(String word) {
+	public void removeWord(String word) {
 		this.words.remove(word);
 	}
 	
