@@ -39,6 +39,7 @@
 - Une première étape consiste à  pouvoir jouer à  plusieurs autour d'un même écran.
 
 - Une interface en ligne de commande est suffisante.
+
 - Nous attendons aussi a minima une de ces deux extensions (ou les deux pour les plus courageux :-)) :
   - Une architecture client / serveur, chaque joueur utilisant une instance d'un client pour jouer.
   - Une intelligence artificiel permettant de jouer contre l'ordinateur.
@@ -46,14 +47,17 @@
   
 - Nous attendons aussi une description de votre architecture (Quel responsabilité à  chaque package, ..).
   
-    Ce projet est répertorié en deux pricnipaux packages qui sont: "game_engine" et "objects"
+    Ce projet est répertorié en deux pricnipaux packages qui sont: "game_engine" et "objects":
     
-    Le package "game_engine" à pour rôle de faire la gestion de  la mécanique du jeu. C'est-à-dire la gestion du pot commun, 
-    du dictionnaire, de la génération de lettres, des joeurs et des tours.
+    Le package "game_engine" à pour rôle de faire la gestion de  la mécanique du jeu. 
+    C'est-à-dire la gestion du pot commun, du dictionnaire, de la génération de lettres, des joeurs et des tours.
     
-    Le package "objects" contient tous les objets nécéssaire à la réalisation du jeu, qui sont: le pot commun, le dictionnaire, les joeurs.
+    Le package "objects" contient tous les objets nécéssaires à la réalisation du jeu, qui sont: le pot commun, 
+    le dictionnaire, les jouers.
     
     Par ailleurs, nous avont également notre classe "Launcher" qui nous permet le régir le bon déroulement du jeu.   
+  
+  
   
 - De plus, vous devrez illustrer trois principes SOLID ou design pattern en utilisant vos propres classes.
 
@@ -66,16 +70,16 @@
                           - s'assurer qu'une seule instance d'un objet sera instanciée (Ici les instances: "CommonPot" et "Dictionary").
                           - s'assurer de l'unicité de l'instance à chaque appel. 
    
-- Ces deux exercices sont Ã  livrer dans le README.md du projet.
+- Ces deux exercices sont à  livrer dans le README.md du projet.
 
 ## Technologies à utiliser 
 
-- Le TP devra Ãªtre rendu sur github et donc Ãªtre gérer via Git
+- Le TP devra être rendu sur github et donc Ãªtre gérer via Git
   - Plusieurs commits par personne sont attendus! 
-- Le projet doit Ãªtre rendu en Java. 
-- Le projet devra pouvoir Ãªtre compiler et lancer en ligne de commande (sans IDE) :
+- Le projet doit être rendu en Java. 
+- Le projet devra pouvoir être compiler et lancer en ligne de commande (sans IDE) :
   - L'utilisation de `Maven` ou `Gradle` est recommandée 
-  - cela ne sert a rien de commiter une jar. Nous n'exécuterons que du code compilÃ© par nous même.
+  - cela ne sert a rien de commiter une jar. Nous n'exécuterons que du code compilé par nous même.
 - Le projet doit contenir des tests unitaires
   - Utilisation de `JUnit` ou `Test-ng`
   - L'utilisation des librairies comme `assertJ` et `Mockito` est recommandé.
