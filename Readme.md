@@ -1,4 +1,4 @@
-# TP Architecture Logicielle / Inf4043 - 2017 - Jeux de lettres
+ # TP Architecture Logicielle / Inf4043 - 2017 - Jeux de lettres
 
 - Date de rendu : 03/03/2017 23h
 - Binôme : Thanh Tam NGUYEN | Swan SADAOUI
@@ -12,7 +12,7 @@
 
 - Objectif du jeux :
   - Le premier joueur ayant 10 mots gagne la partie
-
+   
 - Déroulement du jeux :
   - Chacun des joueurs tire une lettre aléatoire d'un sac, et les mettent au milieu dans le pot commun
   - Le joueur qui a tiré la lettre la plus petite lettre dans l'alphabet commence
@@ -22,7 +22,7 @@
 
 - Comment faire un mot ?
   - En utilisant uniquement les lettres du pot commun
-  - En prenant un mot de ces adversaires (toutes les lettres du mot) et en lui rajoutant des lettres du pot commun
+d  - En prenant un mot de ces adversaires (toutes les lettres du mot) et en lui rajoutant des lettres du pot commun
   - En rallongeant un de ces mots avec des lettres du pot commun ou en utilisant un autre mot (toutes les lettres)
 
 - Attention, seul les noms communs sont autorisés
@@ -34,25 +34,25 @@
   - Le cas des anagrammes :
     - On peut voler un mot en faisant un anagramme uniquement si il n'a pas déjà  été fait. Bien entendu, faire un anagramme permet de tirer une nouvelle lettre.
 
-## Objectif du TP
+## Objectif du TP  
 
 - Une première étape consiste à  pouvoir jouer à  plusieurs autour d'un même écran.
 
 - Une interface en ligne de commande est suffisante.
-
+ 
 - Nous attendons aussi a minima une de ces deux extensions (ou les deux pour les plus courageux :-)) :
   - Une architecture client / serveur, chaque joueur utilisant une instance d'un client pour jouer.
   - Une intelligence artificiel permettant de jouer contre l'ordinateur.
   
   
-- Nous attendons aussi une description de votre architecture (Quel responsabilité à  chaque package, ..).
+- Nous attendons aussi une description de votre architecture  (Quel responsabilité à  chaque package, ..).
    
     Ce projet est répertorié en deux principaux packages qui sont: "game_engine" et "objects" :
     
     Le package "game_engine" à pour rôle de faire la gestion de la mécanique du jeu. 
     C'est-à-dire la gestion du pot commun, du dictionnaire, de la génération de lettres, des joeurs et des tours.
     
-    Le package "objects" contient tous les objets nécéssaires à la réalisation du jeu, qui sont: le pot commun, 
+    Le package "objects" contient tous les objets nécéssaires à la réalisation du jeu, qui sont : le pot commun, 
     le dictionnaire, les jouers.
     
     Par ailleurs, nous avont également notre classe "Launcher" qui nous permet le régir le bon déroulement du jeu.   
