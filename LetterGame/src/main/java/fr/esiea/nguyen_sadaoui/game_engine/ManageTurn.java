@@ -1,5 +1,8 @@
 package fr.esiea.nguyen_sadaoui.game_engine;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import fr.esiea.nguyen_sadaoui.objects.Player;
@@ -8,9 +11,26 @@ public class ManageTurn {
 
 	static int turn = 1;
 	
-	public static void Action() {
-		
-		
+	public static int action() {
+		System.out.println("Choissisez une action:\n"	
+				+"  1 - Construire un mot\n"
+				+"  2 - Réutiliser un mot connu\n"
+				+"  3 - Passer le tour\n"
+				+"  4 - Quitter le jeu\n");
+		InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+        try {
+        	String texte = br.readLine();
+        	int choice = Integer.valueOf(texte);
+			br.close();
+	        isr.close(); 
+	        return choice;
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        return 3;
 	}
 	
 	public static void turn(Player player1, Player player2) {
@@ -57,11 +77,13 @@ public class ManageTurn {
 		ArrayList<String> pickTwoLetters = ManageLetter.generateLetter(2);
 		int letter1 = Character.getNumericValue(pickTwoLetters.get(0).charAt(0));
 		int letter2 = Character.getNumericValue(pickTwoLetters.get(1).charAt(0));
+		ManageCommonPot.putLetterInPot(pickTwoLetters.get(0));
+		ManageCommonPot.putLetterInPot(pickTwoLetters.get(1));
 		if(letter1<letter2){
-			System.out.println("Player"+player1.getName()+"starts with letter "+pickTwoLetters.get(0));
+			System.out.println("Player"+player1.getName()+" commence avec la lettre "+pickTwoLetters.get(0));
 			return player1.getIdPlayer();
 		}else{
-			System.out.println("Player"+player2.getName()+"starts with letter "+pickTwoLetters.get(1));
+			System.out.println("Player"+player2.getName()+" commence avec la lettre "+pickTwoLetters.get(1));
 			return player2.getIdPlayer();
 		}
 		
@@ -101,11 +123,30 @@ public class ManageTurn {
 		summary += ManageCommonPot.showPot();
 		summary += ManagePlayer.showPlayerWord(player1);
 		summary += ManagePlayer.showPlayerWord(player2);
+		summary += "\nC'est au tour de Joueur ";
 		if(currentPlayerID==1){
-			summary += "\nC'est au tour de "+player1.getName();
+			summary += player1.getIdPlayer()+" "+player1.getName();
 		}else{
-			summary += "\nC'est au tour de "+player2.getName();
+			summary += player2.getIdPlayer()+" "+player2.getName();
 		}summary += " de jouer\n*************************\n";
 		System.out.println(summary);
 	}
+
+	public static int switchTurn(int currentPlayerID) {
+		if(currentPlayerID==1){
+			return 2;
+		}else{
+			return 1;
+		}
+	}
+
+	public static Player whoPlays(Player player1, Player player2, int currentPlayerID) {
+		if(currentPlayerID==1){
+			return player1;
+		}else{
+			return player2;
+		}
+	}
+	
+	
 }

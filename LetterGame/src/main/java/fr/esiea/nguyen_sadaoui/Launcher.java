@@ -18,7 +18,9 @@ public class Launcher {
 		 */
 		Dictionary dico = Dictionary.getInstance();
 		CommonPot pot = CommonPot.getInstance();
-		ManagePlayer.playerInit(player1, player2);
+		//ManagePlayer.onePlayerInit(player1, player2);
+		player1 = ManagePlayer.onePlayerInit();
+		player2 = ManagePlayer.onePlayerInit();
 		int currentPlayerID = 0;
 		
 		//WORKING
@@ -26,6 +28,41 @@ public class Launcher {
 		
 		while(ManageTurn.checkScoreAndContinue(player1, player2)){
 			ManageTurn.gameSummary(player1, player2, currentPlayerID);
+			int choice = ManageTurn.action();
+			switch(choice){
+				case 1:
+					System.out.println("Vous avez choisi de construire un mot");
+					try {
+						String newWord = ManagePlayer.promptForWord();
+						if(ManageDictionary.existInDico(newWord)){
+							if(ManageCommonPot.potHasAllLettersForWord(newWord)){
+								ManageCommonPot.removeLettersOfWord(newWord);
+								ManagePlayer.addWordForPlayer(ManageTurn.whoPlays(player1, player2, currentPlayerID), newWord);
+							}else{
+								System.out.println("Soumission de mot non valide. Il peut manquer des lettres dans le pot");
+								break;
+							}
+						}else{
+							System.out.println("Ce mot est introuvable dans le dictionnaire");
+							break;
+						}
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					break;
+				case 2:
+					System.out.println("Vous avez choisi de réutiliser un mot connu");
+					break;
+				case 3:
+					System.out.println("Vous passez le tour");
+					currentPlayerID = ManageTurn.switchTurn(currentPlayerID);
+					continue;
+				case 4:
+					System.out.println("Fin du jeu");
+					System.exit(0);
+			}
+			currentPlayerID = ManageTurn.switchTurn(currentPlayerID);
 		}
 		ManageTurn.whoWins(player1, player2);
 		System.exit(0);
@@ -36,20 +73,5 @@ public class Launcher {
 		ManageCommonPot.putInPot(2);
 		
 		ManageTurn.turn(player1, player2);
-		//Quelle action faire?
-		//1-Ecrire un mot?
-			/* 
-			String newWord = ManagePlayer.promptForWord();
-			////newWord existe dans dico?
-			dico.isWord(newWord);
-			////on enleve les lettres du pot
-			ManageCommonPot.removeLettersOfWord(newWord);
-			////mise a jour du joueur
-			ManagePlayer.addWordForPlayer(player1, newWord);
-			*/
-		//2-Passer le tour?
-			///on recommence
-		//3-Arreter le jeu
-			////System.exit(0)
 	}
 }

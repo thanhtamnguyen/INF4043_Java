@@ -19,4 +19,9 @@ public class ManageDictionary {
 		}
 		return false;		
 	}
+
+	public static boolean existInDico(String newWord) {
+		Dictionary dict = Dictionary.getInstance();
+		return dict.isWord(newWord);
+	}
 }

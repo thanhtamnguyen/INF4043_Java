@@ -22,6 +22,17 @@ public class ManagePlayer {
 		String nomJoueur2 = sc.nextLine();
 		joueur2 = new Player(nomJoueur2, 2, 0);
 		System.out.println("Le nom du joueur 2 est: " + joueur2.getName());
+		sc.close();
+	}
+
+	public static Player onePlayerInit() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Joueur 1?");
+		String nomJoueur1 = sc.nextLine();
+		Player joueur = new Player(nomJoueur1, 1, 0); //arg: name, id, score
+		System.out.println("Le nom du joueur est: " + joueur.getName());
+		return joueur;
 	}
 	
 	public static String promptForWord()throws Exception{
@@ -115,6 +126,7 @@ public class ManagePlayer {
         isr.close(); 
 		return player.getWords().get(choice);
 	}
+
 
 	
 }

@@ -19,6 +19,10 @@ public class ManageCommonPot {
 			// Boucle pour afficher l'intégralité des lettres saved dans le pot commun
 		    System.out.println("Le pot commun contient la lettre:" + c);
 	}
+	public static void putLetterInPot(String letter) {
+		CommonPot pot = CommonPot.getInstance();
+		pot.addLetter(letter);
+	}
 	
 	public static boolean potHasAllLettersForWord(String word){
 		CommonPot pot = CommonPot.getInstance();
