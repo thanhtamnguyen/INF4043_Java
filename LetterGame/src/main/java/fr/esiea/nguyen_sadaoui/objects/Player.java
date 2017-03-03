@@ -39,6 +39,10 @@ public class Player {
 	public void setWords(String word) {
 		this.words.add(word);
 	}
+
+	public void removeWords(String word) {
+		this.words.remove(word);
+	}
 	
 	public void letterPick(){
 		

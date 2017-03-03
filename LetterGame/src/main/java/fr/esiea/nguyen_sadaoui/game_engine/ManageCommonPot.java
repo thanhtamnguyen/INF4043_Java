@@ -34,7 +34,7 @@ public class ManageCommonPot {
 	public static void removeLettersOfWord(String word){
 		CommonPot pot = CommonPot.getInstance();
 		for(char c : word.toCharArray()){
-			if(pot.hasLetter(""+c)) pot.removeLetter(""+c);;
+			if(pot.hasLetter(""+c)) pot.removeLetter(""+c);
 		}
 	}
 }

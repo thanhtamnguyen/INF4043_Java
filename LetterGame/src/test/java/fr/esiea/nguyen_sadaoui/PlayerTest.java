@@ -9,7 +9,7 @@ import fr.esiea.nguyen_sadaoui.objects.*;
 public class PlayerTest {
 	
 	@Test
-    public void testConstructWord() {
+    public void testConstructWordSimple() {
 		//avoir le pot rempli
 		Dictionary dico = Dictionary.getInstance();
 		CommonPot pot = CommonPot.getInstance();
@@ -19,6 +19,8 @@ public class PlayerTest {
 		pot.addLetter("p");
 		pot.addLetter("a");
 		pot.addLetter("o");
+		pot.addLetter("u");
+		pot.addLetter("c");
 		
 		//test prompt pour écrire le mot
 		//String w =  ManagePlayer.promptForWord();
@@ -27,9 +29,10 @@ public class PlayerTest {
 		//test mot et lettre du pot
 		String w1 = "est";
 		String w2 = "ouesto";
+		String w3 = "nord";
 		System.out.println("ok");
 		assertTrue(ManageCommonPot.potHasAllLettersForWord(w1));
-		assertFalse(ManageCommonPot.potHasAllLettersForWord(w2));
+		assertTrue(ManageCommonPot.potHasAllLettersForWord(w2));
 		
 		//test isWord(mot)
 		assertTrue(dico.isWord(w1));
@@ -39,12 +42,62 @@ public class PlayerTest {
 		assertFalse(ManageCommonPot.potHasAllLettersForWord(w1));
 		
 		//update player
-		Player joueur1 = new Player("Person", 1, 0);
-		ManagePlayer.addWordForPlayer(joueur1, w1);
+		Player joueur1 = new Player("Person1", 1, 0);
+		ManagePlayer.addWordForPlayer(joueur1, w3);
 		assertEquals(Integer.valueOf(1), Integer.valueOf(joueur1.getScore()));
 		System.out.println(joueur1.getWords());
+		
 		ManagePlayer.addWordForPlayer(joueur1, w2);
 		assertEquals(Integer.valueOf(2), Integer.valueOf(joueur1.getScore()));
-		System.out.println(joueur1.getWords());
+		System.out.println(joueur1.getWords());		
 	}
+
+	@Test
+	public void testStealWord(){
+		Dictionary dico = Dictionary.getInstance();
+		CommonPot pot = CommonPot.getInstance();
+		pot.addLetter("t");
+		pot.addLetter("e");
+		pot.addLetter("a");
+		pot.addLetter("u");
+		pot.addLetter("c");
+		//get a word from a player
+		//steal a word - steal est to become test
+		Player joueur1 = new Player("Person1", 1, 0);
+		Player joueur2 = new Player("Person2", 2, 0);
+		ManagePlayer.addWordForPlayer(joueur2, "est"); 
+		ManagePlayer.addWordForPlayer(joueur2, "lion"); 
+		String choix ="lion";
+		choix = ManagePlayer.showAndChoosePlayerWord(joueur2);
+		String newWord =  ManagePlayer.promptForWord();
+		//new word valid
+		assertTrue(ManageDictionary.useAWord(choix, newWord));
+		ManagePlayer.addWordForPlayer(joueur1, choix);
+		ManagePlayer.removeWordForPlayer(joueur2, choix);
+		assertEquals(Integer.valueOf(1), Integer.valueOf(joueur1.getScore()));
+		assertEquals(Integer.valueOf(1), Integer.valueOf(joueur2.getScore()));
+	}
+	/*@Test
+	public void testUseOwnWord(){
+		Dictionary dico = Dictionary.getInstance();
+		CommonPot pot = CommonPot.getInstance();
+		pot.addLetter("t");
+		pot.addLetter("e");
+		pot.addLetter("a");
+		pot.addLetter("u");
+		pot.addLetter("c");
+		//get a word from a player
+		//steal a word - steal est to become test
+		Player joueur1 = new Player("Person1", 1, 0); 
+		ManagePlayer.addWordForPlayer(joueur1, "lion"); 
+		String choix ="lion";
+		/*choix = ManagePlayer.showAndChoosePlayerWord(joueur1);
+		String newWord =  ManagePlayer.promptForWord();
+		//new word valid
+		//assertTrue(ManageDictionary.useAWord(choix, newWord));
+		ManagePlayer.addWordForPlayer(joueur1, choix);
+		//assertEquals(Integer.valueOf(1), Integer.valueOf(joueur1.getScore()));
+		 * 
+		 */
+	//}*/
 }
