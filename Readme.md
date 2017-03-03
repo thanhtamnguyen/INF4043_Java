@@ -1,18 +1,19 @@
 # TP Architecture Logicielle / Inf4043 - 2017 - Jeux de lettres
 
-- Date de rendu : 24/02/2017 23h
-- BinÃ´me : Thanh Tam NGUYEN | Swan SADAOUI
-u- Contacts : 
+- Date de rendu : 03/03/2017 23h
+- Binôme : Thanh Tam NGUYEN | Swan SADAOUI
+- Classe: 4A CFA ESIEA
+- Contacts : 
   - mlab.cours[at]gmail[dot]com (TP Ã  rendre Ã  cette adresse)
   - ledoyen.esiea[at]gmail[dot]com
 
-## RÃ¨gles du jeux 
+## Règles du jeux 
 
 - Objectif du jeux :
   - Le premier joueur ayant 10 mots gagne la partie
 
 - DÃ©roulement du jeux :
-b  - Chacun des joueurs tire une lettre alÃ©atoire d'un sac, et les mettent au milieu dans le pot commun
+  - Chacun des joueurs tire une lettre alÃ©atoire d'un sac, et les mettent au milieu dans le pot commun
   - Le joueur qui a tirÃ© la lettre la plus petite lettre dans l'alphabet commence
   - Chaque fois que c'est le dÃ©but du tour d'un joueur il tire deux lettres alÃ©atoires qu'il rajoute au pot commun
   - Chaque fois qu'un joueur fait un mot il tire une lettre alÃ©atoire qu'il rajoute au pot commun
@@ -28,7 +29,7 @@ b  - Chacun des joueurs tire une lettre alÃ©atoire d'un sac, et les mettent au
   - les lettres possibles sont uniquement les 26 de l'alphabet (ex : Ã© <-> e)
   - les mots composÃ©s sont considÃ©rÃ©s comme deux mots
 
-- Pour les plus avancÃ©s :
+- Pour les plus avancs :
   - Le cas des anagrammes :
     - On peut voler un mot en faisant un anagramme uniquement si il n'a pas dÃ©jÃ  Ã©tÃ© fait. Bien entendu, faire un anagramme permet de tirer une nouvelle lettre.
 
