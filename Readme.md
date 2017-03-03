@@ -47,9 +47,9 @@
   
 - Nous attendons aussi une description de votre architecture (Quel responsabilité à  chaque package, ..).
   
-    Ce projet est répertorié en deux principaux packages qui sont: "game_engine" et "objects":
+    Ce projet est répertorié en deux principaux packages qui sont: "game_engine" et "objects" :
     
-    Le package "game_engine" à pour rôle de faire la gestion de  la mécanique du jeu. 
+    Le package "game_engine" à pour rôle de faire la gestion de la mécanique du jeu. 
     C'est-à-dire la gestion du pot commun, du dictionnaire, de la génération de lettres, des joeurs et des tours.
     
     Le package "objects" contient tous les objets nécéssaires à la réalisation du jeu, qui sont: le pot commun, 
